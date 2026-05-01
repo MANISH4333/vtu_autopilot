@@ -4,7 +4,7 @@
 
 **VTU Autopilot** automates marking VTU online course lectures as complete — parallel processing, smart retries, real-time progress, and a clean web UI.
 
-[![View Live](https://img.shields.io/badge/View%20Live-https%3A%2F%2Fvtu--autopilot.up.railway.app-blue?style=for-the-badge&logo=railway)](https://vtu-autopilot.up.railway.app/)
+[![Deploy to Render](https://img.shields.io/badge/Deploy-Render-46E3B7?style=for-the-badge&logo=render)](https://render.com)
 
 ---
 
@@ -86,6 +86,29 @@ That's it. The web UI is identical to the hosted version — enter your credenti
 ### No Redis needed
 
 Redis is only used for the public hosted statistics counter. Running locally works perfectly without it — just skip any `KV_REST_API_*` env vars.
+
+---
+
+## 🚀 Deploy to Render (Free Tier)
+
+Deploy your own instance on **Render** for free:
+
+### Quick Deploy
+
+1. Fork or use this repo: [MANISH4333/vtu_autopilot](https://github.com/MANISH4333/vtu_autopilot)
+2. Go to [dashboard.render.com](https://dashboard.render.com)
+3. Click **New +** → **Web Service**
+4. Select your GitHub repo
+5. Render will auto-detect the config from `render.yaml`
+6. Add environment variables:
+   - `VTU_EMAIL` = your VTU email
+   - `VTU_PASSWORD` = your VTU password
+   - `VTU_COURSE_SLUG` = e.g., `1-social-networks`
+   - (Optional) `KV_REST_API_URL` and `KV_REST_API_TOKEN` for stats tracking
+
+7. Click **Deploy** — done! ✅
+
+**Note:** Free tier services sleep after 15 mins of inactivity. They wake up when accessed (no data loss).
 
 ---
 
